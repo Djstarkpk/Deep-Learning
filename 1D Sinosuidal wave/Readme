@@ -1,0 +1,16 @@
+The code is for replicating the results of the paper 
+   DEEPOKAN: DEEP OPERATOR NETWORK BASED ON KOLMOGOROV ARNOLD NETWORKS FOR MECHANICS PROBLEMS
+
+The equation of the first one(1.1) is given below:
+ y1(x)=sin(2πx)+cos(πx2)+cos(πx3)×sin(πx3) (15)
+ Equation 15 is sampled with 1000 uniformly distributed points between[-2,2].TheRBF-KAN has 2 hiddenlayers
+ with 8 neurons each,r=1,and w=640 trainable parameters.The MLP is constructed with 2 hidden layers and 24
+ neurons each,r= 1 and w=673 learnable parameters.In this example, we train both networks with the L-BFGS optimizer and used RMSD LOSS function.
+
+The equation of the 2nd one(1.2(a) and 1.2(b)) is given below:
+ y2(x) = cos(4πx) −sin(πx2) × cos(πx3)  (16)
+ Equation 16 is sampled with 1000 uniformly distributed points between [-3, 3]. The same architectures for RBF-KAN
+ and MLP are utilized as in the previous case. Here, we explore two training variations. In the first case (Wave-Case2A),
+ we use the Adam optimizer with a learning rate lr = 10−2 for 15000 epochs, and in the second case (Wave-Case2B),
+ we use Adam with lr = 10−3 for 20000 epochs.
+
